@@ -1,0 +1,20 @@
+{
+  "name": "verath-auto",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Verath Auto - AI-powered automotive platform for Pakistan (Phase 1: foundation + marketplace)",
+  "main": "server.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "make-admin": "node --disable-warning=ExperimentalWarning scripts/make-admin.js",
+    "seed": "node --disable-warning=ExperimentalWarning src/db/seed.js",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}

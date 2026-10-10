@@ -1,0 +1,28 @@
+# Render "Blueprint": New + > Blueprint > pick your GitHub repo. Needs a paid instance because it uses a persistent disk.
+services:
+  - type: web
+    name: verath-auto
+    runtime: docker
+    plan: starter
+    healthCheckPath: /healthz
+    disk:
+      name: verath-data
+      mountPath: /data
+      sizeGB: 5
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /data
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: VERATH_SHOWROOM_PHONE
+        sync: false
+      - key: VERATH_SHOWROOM_WHATSAPP
+        sync: false

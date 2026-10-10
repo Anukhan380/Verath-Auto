@@ -1,0 +1,9 @@
+node_modules
+data
+.env
+.git
+tests
+public/uploads/seed
+public/uploads/vehicles
+public/uploads/showroom
+*.zip
